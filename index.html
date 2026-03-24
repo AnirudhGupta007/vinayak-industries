@@ -503,108 +503,138 @@
     .contact .section-header h2 { color: white; }
     .contact .section-header p { color: rgba(255,255,255,0.7); }
 
-    .contact-grid {
+    .contact-content {
       max-width: 900px;
       margin: 0 auto;
+    }
+    .contact-persons {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
+      gap: 24px;
+      margin-bottom: 24px;
     }
-    .contact-actions {
+    .person-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+    .person-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .person-card .person-number {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .person-actions {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
+      gap: 10px;
+      justify-content: center;
     }
-    .contact-btn {
+    .person-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .person-actions a:hover { transform: translateY(-2px); }
+    .person-actions a svg { width: 18px; height: 18px; fill: currentColor; }
+    .action-wa {
+      background: #25D366;
+      color: white;
+    }
+    .action-wa:hover { background: #20bd5a; }
+    .action-call {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .action-call:hover { background: rgba(255,255,255,0.2); }
+
+    .contact-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .contact-email {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px;
       display: flex;
       align-items: center;
       gap: 16px;
-      padding: 20px 24px;
-      border-radius: 14px;
-      text-decoration: none;
-      transition: all 0.2s;
-      font-weight: 600;
-      font-size: 1rem;
     }
-    .contact-btn:hover { transform: translateY(-3px); }
-    .contact-btn .btn-icon {
+    .contact-email .email-icon {
       width: 48px;
       height: 48px;
       border-radius: 12px;
+      background: rgba(255,255,255,0.12);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .contact-btn .btn-text small {
+    .contact-email .email-icon svg { width: 24px; height: 24px; fill: white; }
+    .contact-email a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .contact-email small {
       display: block;
-      font-weight: 400;
+      color: rgba(255,255,255,0.5);
       font-size: 0.8rem;
-      opacity: 0.8;
+      font-weight: 400;
       margin-bottom: 2px;
     }
 
-    .btn-wa {
-      background: rgba(37,211,102,0.15);
-      color: #25D366;
-      border: 1px solid rgba(37,211,102,0.3);
-    }
-    .btn-wa:hover { background: rgba(37,211,102,0.25); }
-    .btn-wa .btn-icon { background: #25D366; color: white; }
-
-    .btn-phone {
-      background: rgba(255,255,255,0.08);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-    .btn-phone:hover { background: rgba(255,255,255,0.14); }
-    .btn-phone .btn-icon { background: rgba(255,255,255,0.15); }
-
-    .btn-mail {
-      background: rgba(255,255,255,0.08);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-    .btn-mail:hover { background: rgba(255,255,255,0.14); }
-    .btn-mail .btn-icon { background: rgba(255,255,255,0.15); }
-
-    .contact-details {
+    .contact-address {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
-      padding: 32px;
-    }
-    .contact-details h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .detail-item {
+      padding: 28px;
       display: flex;
-      gap: 12px;
-      margin-bottom: 18px;
+      align-items: center;
+      gap: 16px;
+    }
+    .contact-address .addr-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-address .addr-icon svg { width: 24px; height: 24px; fill: white; }
+    .contact-address .addr-text {
       font-size: 0.9rem;
       color: rgba(255,255,255,0.8);
       line-height: 1.6;
     }
-    .detail-item:last-child { margin-bottom: 0; }
-    .detail-item svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      margin-top: 3px;
-      fill: var(--accent);
+    .contact-address .addr-text strong {
+      color: white;
+      display: block;
+      margin-bottom: 4px;
     }
-    .detail-divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin: 20px 0;
-    }
-    .detail-small {
+
+    .contact-legal {
+      text-align: center;
+      margin-top: 20px;
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.7;
+      color: rgba(255,255,255,0.4);
     }
 
     /* ── Footer ── */
@@ -682,7 +712,8 @@
       .stats { margin-top: -30px; }
       .section { padding: 70px 20px; }
       .products-grid { grid-template-columns: 1fr; max-width: 400px; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .contact-persons { grid-template-columns: 1fr; }
+      .contact-bottom { grid-template-columns: 1fr; }
       .nav-brand span { font-size: 0.95rem; }
       .nav-cta { padding: 8px 16px; font-size: 0.8rem; }
       .nav-links { display: none; }
@@ -961,62 +992,62 @@
       <h2>Ready to Place an Order?</h2>
       <p>Reach out for inquiries, custom requirements, or bulk orders</p>
     </div>
-    <div class="contact-grid">
+    <div class="contact-content">
 
-      <div class="contact-actions">
-        <a href="https://wa.me/919625252595?text=Hi%2C%20I%27m%20interested%20in%20your%20products.%20Please%20share%20details." class="contact-btn btn-wa" target="_blank">
-          <div class="btn-icon">
-            <svg class="icon-md" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg>
+      <div class="contact-persons">
+        <div class="person-card">
+          <h3>Gourav Goyal</h3>
+          <div class="person-number">+91-96252 52595</div>
+          <div class="person-actions">
+            <a href="https://wa.me/919625252595?text=Hi%2C%20I%27m%20interested%20in%20your%20products.%20Please%20share%20details." class="action-wa" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+919625252595" class="action-call">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              Call
+            </a>
           </div>
-          <div class="btn-text">
-            <small>WhatsApp - Gourav Goyal</small>
-            +91-96252 52595
+        </div>
+        <div class="person-card">
+          <h3>Amit Goyal</h3>
+          <div class="person-number">+91-98164 64008</div>
+          <div class="person-actions">
+            <a href="https://wa.me/919816464008?text=Hi%2C%20I%27m%20interested%20in%20your%20products.%20Please%20share%20details." class="action-wa" target="_blank">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+919816464008" class="action-call">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              Call
+            </a>
           </div>
-        </a>
-        <a href="https://wa.me/919816464008?text=Hi%2C%20I%27m%20interested%20in%20your%20products.%20Please%20share%20details." class="contact-btn btn-wa" target="_blank">
-          <div class="btn-icon">
-            <svg class="icon-md" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg>
-          </div>
-          <div class="btn-text">
-            <small>WhatsApp</small>
-            +91-98164 64008
-          </div>
-        </a>
-        <a href="tel:+919625252595" class="contact-btn btn-phone">
-          <div class="btn-icon">
-            <svg class="icon-md" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="white"/></svg>
-          </div>
-          <div class="btn-text">
-            <small>Call us</small>
-            +91-96252 52595 / +91-98164 64008
-          </div>
-        </a>
-        <a href="mailto:vinayakindltd@gmail.com" class="contact-btn btn-mail">
-          <div class="btn-icon">
-            <svg class="icon-md" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/></svg>
-          </div>
-          <div class="btn-text">
-            <small>Email us at</small>
-            vinayakindltd@gmail.com
-          </div>
-        </a>
+        </div>
       </div>
 
-      <div class="contact-details">
-        <h3>Factory Address</h3>
-        <div class="detail-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <span>Plot No. 144, HPSIDC, Opp. Dabur Gate No. 1,<br/>Industrial Area, Baddi, Distt. Solan (H.P.) - 173205</span>
+      <div class="contact-bottom">
+        <div class="contact-email">
+          <div class="email-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <small>Email us</small>
+            <a href="mailto:vinayakindltd@gmail.com">vinayakindltd@gmail.com</a>
+          </div>
         </div>
-        <div class="detail-item">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <span>+91-96252 52595 (Gourav Goyal)<br/>+91-98164 64008</span>
+        <div class="contact-address">
+          <div class="addr-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="addr-text">
+            <strong>Factory Address</strong>
+            Plot No. 144, HPSIDC, Opp. Dabur Gate No. 1, Industrial Area, Baddi, Solan (H.P.) - 173205
+          </div>
         </div>
-        <hr class="detail-divider" />
-        <div class="detail-small">
-          GST: 02AAXFV9207H1ZR<br/>
-          UDYAM: UDYAM-HP-11-0024506
-        </div>
+      </div>
+
+      <div class="contact-legal">
+        GST: 02AAXFV9207H1ZR &nbsp;|&nbsp; UDYAM: UDYAM-HP-11-0024506
       </div>
 
     </div>
